@@ -10,29 +10,36 @@
   text-align: center;
   padding: 1.75rem 1rem;
 
-  position: relative;
-  & input{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    opacity: 0;
-  }
+  position: relative;  
+}
 
-  & p{
-    color:#A8A29E;
-  }
+.dropzone input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+}
 
-  &:hover, &:has(input:focus){
-    outline-width: 0;
-    border-color:var(--stroke-highlight);
-    background-color: var(--surface-secondary);
-    & p{
-      color: var(--text-tertiary);
-    }
+.dropzone p{
+  color:#A8A29E;
+}
 
-    & svg path{
-      stroke:var(--stroke-highlight);
-    }
-  }
+.dropzone:hover, 
+.dropzone:has(input:focus)
+{
+  outline-width: 0;
+  border-color:var(--stroke-highlight);
+  background-color: var(--surface-secondary);  
+}
+
+.dropzone:hover p,
+.dropzone:has(input:focus) p
+{
+  color: var(--text-tertiary);
+}
+
+.dropzone:hover svg path, 
+.dropzone:has(input:focus) svg path{
+  stroke:var(--stroke-highlight);
 }

@@ -23,3 +23,9 @@ fieldset + fieldset{
   display:flex;
   gap:1rem;
 }
+
+@media (width < 80em){
+  .actions-wrapper{
+    flex-direction: column;
+  }  
+}

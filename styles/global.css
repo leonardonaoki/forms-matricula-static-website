@@ -50,3 +50,18 @@ img{
 .flex-2{
   flex:2;
 }
+
+.flex-column{
+  flex-direction: column;
+}
+
+@media(width < 80em){
+  .desktop-only{
+    display:none;
+  }
+}
+@media(width >= 80em){
+  .mobile-only{
+    display:none;
+  }
+}

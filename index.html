@@ -13,6 +13,14 @@
 </head>
 <body>
   <div id="app">
+    <aside class="mobile-only">
+      <div class="aside-container">
+        <header>
+          <img src="assets/Logo.svg" alt="Logo da estrelas do amanhã">
+        </header>
+        <img src="assets/Illustration.svg" alt="Ilustração de uma professora com crianças prestando atenção.">
+      </div>
+    </aside>
     <main>
       <div class="main-container">
         <div class="back">
@@ -79,12 +87,33 @@
           <fieldset class="address">
             <legend>Endereço residencial</legend>
 
-            <div class="input-wrapper">
+            <div class="flex flex-column mobile-only">
+              <div class="input-wrapper">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep">
+              </div>
+              <div class="input-wrapper">
+                <label for="street">Rua</label>
+                <input type="text" id="street" name="street" value="Rua das Flores" disabled>
+              </div>
+              <div class="input-wrapper">
+                <label for="number">Número</label>
+                <input type="number" id="number" name="number">
+              </div>
+              <div class="input-wrapper">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" value="São Paulo" disabled>
+              </div>
+              <div class="input-wrapper">
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" disabled>
+              </div>              
+            </div>
+            <div class="input-wrapper desktop-only">
               <label for="cep">CEP</label>
               <input type="text" id="cep" name="cep">
             </div>
-
-            <div class="flex">
+            <div class="flex desktop-only">
               <div class="input-wrapper flex-2">
                 <label for="street">Rua</label>
                 <input type="text" id="street" name="street" value="Rua das Flores" disabled>
@@ -94,7 +123,7 @@
                 <input type="number" id="number" name="number">
               </div>
             </div>
-            <div class="flex">
+            <div class="flex desktop-only">
               <div class="input-wrapper flex-2">
                 <label for="city">Cidade</label>
                 <input type="text" id="city" name="city" value="São Paulo" disabled>
@@ -225,7 +254,7 @@
         </form>
       </div>        
     </main>
-    <aside>
+    <aside class="desktop-only">
       <div class="aside-container">
         <header>
           <img src="assets/Logo.svg" alt="Logo da estrelas do amanhã">
